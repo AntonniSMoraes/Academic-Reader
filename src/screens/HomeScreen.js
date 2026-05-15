@@ -21,35 +21,36 @@ export default function HomeScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      {pages.length === 0 && !loading ? (
-        <View style={styles.emptyState}>
-          <ScanSearch size={80} color="#333" />
-          <Text style={styles.text}>Nenhum documento carregado</Text>
-          <TouchableOpacity style={styles.button} onPress={handleScan}>
-            <Text style={styles.buttonText}>Escanear PDF de Teste</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <FlatList
-          data={pages}
-          keyExtractor={(item) => item.page.toString()}
-          renderItem={({ item }) => <PageView pageData={item} baseUrl={api.defaults.baseURL} />}
-          ListHeaderComponent={() => (
-             <TouchableOpacity style={styles.miniButton} onPress={handleScan}>
-                <Text style={styles.buttonText}>Atualizar / Novo Scan</Text>
-             </TouchableOpacity>
-          )}
-        />
-      )}
+    <Text>Em breve</Text>
+    // <View style={styles.container}>
+    //   {pages.length === 0 && !loading ? (
+    //     <View style={styles.emptyState}>
+    //       <ScanSearch size={80} color="#333" />
+    //       <Text style={styles.text}>Nenhum documento carregado</Text>
+    //       <TouchableOpacity style={styles.button} onPress={handleScan}>
+    //         <Text style={styles.buttonText}>Escanear PDF de Teste</Text>
+    //       </TouchableOpacity>
+    //     </View>
+    //   ) : (
+    //     <FlatList
+    //       data={pages}
+    //       keyExtractor={(item) => item.page.toString()}
+    //       renderItem={({ item }) => <PageView pageData={item} baseUrl={api.defaults.baseURL} />}
+    //       ListHeaderComponent={() => (
+    //          <TouchableOpacity style={styles.miniButton} onPress={handleScan}>
+    //             <Text style={styles.buttonText}>Atualizar / Novo Scan</Text>
+    //          </TouchableOpacity>
+    //       )}
+    //     />
+    //   )}
 
-      {loading && (
-        <View style={styles.loadingOverlay}>
-          <ActivityIndicator size="large" color="#007AFF" />
-          <Text style={styles.loadingText}>O Python está processando as páginas no Render...</Text>
-        </View>
-      )}
-    </View>
+    //   {loading && (
+    //     <View style={styles.loadingOverlay}>
+    //       <ActivityIndicator size="large" color="#007AFF" />
+    //       <Text style={styles.loadingText}>O Python está processando as páginas no Render...</Text>
+    //     </View>
+    //   )}
+    // </View>
   );
 }
 

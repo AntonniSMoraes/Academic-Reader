@@ -12,7 +12,7 @@ import app from '@react-native-firebase/app';
 import firestore from '@react-native-firebase/firestore';
 import OpenArticleButton from '../components/OpenArticleButton';
 
-export default function HistoryScreen() {
+export default function SearchScreen() {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
